@@ -92,14 +92,22 @@ class Perro:
     def es_cachorro(edad):
         return edad < 3
 
-
     @staticmethod
-    def dormir(veces = 5):
-        for n in range (veces):
-            print(f"Dando vuelta {n+1}")
+    def dormir(veces=5):
+        for n in range(veces):
+            print(f"Dando vuelta {n + 1}")
         print("Zzzzzzzzz!")
 
     @classmethod
     def perro_grande(cls, est):
-        if est>0.79:
-            return cls("",0,est)
+        # cls= perro
+        if est > 0.79:
+            return cls("", 0, est)
+            # return Perro("",0,est)
+
+    @classmethod
+    def contructor_dos(cls, raz, ed):
+        if ed > 0 and ed < 20:
+            return cls(raz, ed, 0.0)
+        else:
+            return cls(raz, 0, 0.0)
